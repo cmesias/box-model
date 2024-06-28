@@ -1,0 +1,55 @@
+
+/* content-box is the default
+ * Content area in width is 100px
+ * Don't know how wide element is
+ */
+.box1 {
+    box-sizing: content-box;
+    width: 100px;
+    padding: 1em;
+    border: solid 1px black;
+
+    /* outside of borders, but never take up space */
+    /* outline: solid 5px red;  */
+}
+
+/* Element width is 100px
+ * Don't know width of content area
+ * Often, easier to work with */
+.box2 {
+    box-sizing: border-box;
+    width: 100px;
+    padding: 1em;
+    border: solid 1px black;
+    outline: solid 5px red;
+}
+
+/* Use border-box for this div */
+.container {
+    width: 300px;
+    padding: 1em;
+    border: solid 1px black;
+}
+
+.container .item {
+    height: 100px;
+    border: solid 1px red;
+    margin: 20px;
+
+    /* This will ensure the .item div will stay at 100px height even if we add +20px border when hoveed 
+     * This prevents the shifting down of elements below it) 
+     */
+    box-sizing: border-box;        
+}
+.container .item:hover {
+    border: solid 20px red;
+}
+
+.p1 {
+    width: 50%;
+}
+
+.p2 {
+    width: 50%;
+    min-width: 500px;   /* This will ensure that 500px is the lowest this paragaph's width will be if the user tries to resize the browser to a lower width */
+}
