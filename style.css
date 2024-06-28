@@ -1,3 +1,12 @@
+h1, p   {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: green;
+}
+
 
 /* content-box is the default
  * Content area in width is 100px
