@@ -15,7 +15,10 @@
 
 /* Element width is 100px
  * Don't know width of content area
- * Often, easier to work with */
+ * Often, easier to work with 
+ *
+ * "border-box": calculates the element's size including the content, padding, and border
+ */
 .box2 {
     box-sizing: border-box;
     width: 100px;
